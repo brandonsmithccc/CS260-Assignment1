@@ -42,9 +42,8 @@ public:
 	 * \return true if the item is unique and was inserted, false if not
 	 */
 	bool prepend(const int n) {
-
-		//check for duplicate using find function
-		if (find(n) == -1) {
+		
+		if (find(n) == 0) { //item not found in list
 			Node* newNode = new Node;
 			newNode->data = n;
 			newNode->next = head;
@@ -169,7 +168,7 @@ public:
 			position++;
 			current = current->next;
 		}
-		return -1;
+		return 0;
 	}
 
 	/**

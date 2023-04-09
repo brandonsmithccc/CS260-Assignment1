@@ -33,9 +33,9 @@ int main()
 	intList.remove(25);
 	intList.print();
 
-	intList.removeAll();
+	/*intList.removeAll();
 	intList.print();
-	std::cout << std::endl << std::endl;
+	std::cout << std::endl << std::endl;*/
 
 
 
