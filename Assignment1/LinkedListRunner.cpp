@@ -34,8 +34,6 @@ int main()
 	intList.print();
 	intList.remove(25);
 	intList.print();
-	intList.remove(12);
-	intList.print();
 
 	intList.removeAll();
 	intList.print();
