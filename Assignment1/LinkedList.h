@@ -94,15 +94,21 @@ public:
 		Node* current = head;
 		Node* previous = nullptr;
 
-		while (current != nullptr) {
+		if (head == nullptr) { //if the list is empty
+			return false;
+		}
+
+		if (find(n) == 1) { //if item to remove is first
+			head = head->next;
+			delete current;
+			return true;
+		}
+
+		while (current != nullptr) { //could I use a for loop here since I have the find function?
 			if (current->data == n) {
-				if (previous != nullptr) {
-					previous->next = current->next;
-				}
-				else {
-					delete current;
-					return true;
-				}
+				previous->next = current->next;
+				delete current;
+				return true;
 			}
 			previous = current;
 			current = current->next;

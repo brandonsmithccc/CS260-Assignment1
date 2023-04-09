@@ -29,13 +29,17 @@ int main()
 	std::cout << "8 is in position " << intList.find(8) << std::endl;
 
 	intList.remove(15);
+	intList.print();
 	intList.remove(5);
+	intList.print();
 	intList.remove(25);
 	intList.print();
-
-	/*intList.removeAll();
+	intList.remove(12);
 	intList.print();
-	std::cout << std::endl << std::endl;*/
+
+	intList.removeAll();
+	intList.print();
+	std::cout << std::endl << std::endl;
 
 
 
