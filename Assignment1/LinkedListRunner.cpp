@@ -18,8 +18,12 @@ int main()
     LinkedList intList;
 	intList.prepend(10);
 	intList.prepend(20);
+	intList.prepend(20);
+	intList.print();
 	intList.prepend(5);
 	intList.append(15);
+	intList.append(15);
+	intList.print();
 	intList.append(25);
 	intList.print();
 
