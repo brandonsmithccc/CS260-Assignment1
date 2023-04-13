@@ -64,23 +64,26 @@ public:
 	 * \return true if the item is unique and was inserted, false otherwise
 	 */
 	bool append(const int n) {
-		Node* current = head;
-		Node* newNode = new Node;
+		if (find(n) == 0) {
+			Node* current = head;
+			Node* newNode = new Node;
 
-		newNode->data = n;
-		newNode->next = nullptr;
+			newNode->data = n;
+			newNode->next = nullptr;
 
-		if (head == nullptr) {
-			prepend(n);
-		}
-
-		else {
-			while(current->next != nullptr) { //have to stop one before the final node
-				current = current->next;
+			if (head == nullptr) {
+				prepend(n);
 			}
-			current->next = newNode;
-			return true;
+
+			else {
+				while (current->next != nullptr) { //have to stop one before the final node
+					current = current->next;
+				}
+				current->next = newNode;
+				return true;
+			}
 		}
+		
 		return false;
 	}
 
